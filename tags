@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUF_SIZE	Chapter4/echo_client.c	8;"	d	file:
+BUF_SIZE	Chapter4/echo_serve.c	8;"	d	file:
+BUF_SIZE	Chapter5/echo_client2.c	7;"	d	file:
+BUF_SIZE	Chapter5/op_client.c	7;"	d	file:
+BUF_SIZE	Chapter5/op_server.c	8;"	d	file:
+BUF_SIZE	Chapter6/bound_host1.c	8;"	d	file:
+BUF_SIZE	Chapter6/bound_host2.c	8;"	d	file:
+BUF_SIZE	Chapter6/uecho_client.c	8;"	d	file:
+BUF_SIZE	Chapter6/uecho_con_client.c	8;"	d	file:
+BUF_SIZE	Chapter6/uecho_server.c	8;"	d	file:
+OPSZ	Chapter5/op_client.c	9;"	d	file:
+OPSZ	Chapter5/op_server.c	7;"	d	file:
+RLT_SIZE	Chapter5/op_client.c	8;"	d	file:
+calculate	Chapter5/op_server.c	/^int calculate(int opnum, int opnds[], char op)$/;"	f
+error_handling	Chapter1/hello_client.c	/^void error_handling(char* message){$/;"	f
+error_handling	Chapter1/hello_sever.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter1/low_open.c	/^void error_handling(char* message){$/;"	f
+error_handling	Chapter1/tcp_server.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter2/tcp_client.c	/^void error_handling(char* message){$/;"	f
+error_handling	Chapter2/tcp_server.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter3/inet_aton.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter4/echo_client.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter4/echo_serve.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter5/echo_client2.c	/^void error_handling(char* message){$/;"	f
+error_handling	Chapter5/op_client.c	/^void error_handling(char* message){$/;"	f
+error_handling	Chapter5/op_server.c	/^void error_handling(char* message)$/;"	f
+error_handling	Chapter6/bound_host1.c	/^void error_handling(char *message)$/;"	f
+error_handling	Chapter6/bound_host2.c	/^void error_handling(char *message)$/;"	f
+error_handling	Chapter6/uecho_client.c	/^void error_handling(char *message)$/;"	f
+error_handling	Chapter6/uecho_con_client.c	/^void error_handling(char *message)$/;"	f
+error_handling	Chapter6/uecho_server.c	/^void error_handling(char *message)$/;"	f
+main	Chapter1/hello_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter1/hello_sever.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter1/low_open.c	/^int main(void)$/;"	f
+main	Chapter1/tcp_server.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter2/endian_conv.c	/^int main(int argc, char *argv[])$/;"	f
+main	Chapter2/tcp_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter2/tcp_server.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter3/inet_addr.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter3/inet_aton.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter3/inet_ntoa.c	/^int main(int arcg, char* argv[])$/;"	f
+main	Chapter4/echo_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter4/echo_serve.c	/^int main(int argc, char *argv[])$/;"	f
+main	Chapter5/echo_client2.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter5/op_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter5/op_server.c	/^int main(int argc, char *argv[])$/;"	f
+main	Chapter6/bound_host1.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter6/bound_host2.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter6/uecho_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter6/uecho_con_client.c	/^int main(int argc, char* argv[])$/;"	f
+main	Chapter6/uecho_server.c	/^int main(int argc, char *argv[])$/;"	f
