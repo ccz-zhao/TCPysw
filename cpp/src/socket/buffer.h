@@ -41,5 +41,29 @@ class Buffer {
 };
 
 class BufferList {
-  
+  private:
+    std::deque<Buffer> _buffers{};
+
+  public:
+    BufferList() = default;
+
+    BufferList(Buffer buffer) : _buffers{buffer} {};
+
+    BufferList(std::string&& str) noexcept {
+      Buffer buffer{std::move(str)};
+      append(buffer);
+    }
+
+    const std::deque<Buffer>& buffers() const {return _buffers;}
+
+    void append(const BufferList& other);
+
+    operator Buffer() const;
+
+    void remove_prefix(size_t n);
+
+    size_t size() const;
+
+    std::string concatenate() const;
+
 };
