@@ -11,8 +11,16 @@ int main() {
     BufferList bl(hello);
     bl.append(world);
 
+    BufferViewList blv(bl);
+
     std::cout << bl.concatenate() << std::endl; 
     bl.remove_prefix(7);
     std::cout << bl.concatenate() << std::endl; 
 
+    std::cout << blv.size() << std::endl;
+    blv.remove_prefix(3);
+    std::cout << blv.size() << std::endl;
+
+    const char* str_c = "hello char";
+    BufferViewList bl2(str_c);
 }

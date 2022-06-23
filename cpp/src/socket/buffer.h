@@ -5,6 +5,8 @@
 #include <stdexcept>
 #include <string> 
 #include <string_view>
+#include <sys/uio.h>
+#include <vector>
 
 class Buffer {
   private:
@@ -67,3 +69,25 @@ class BufferList {
     std::string concatenate() const;
 
 };
+
+class BufferViewList {
+  private:
+    std::deque<std::string_view> _views{};
+  public:
+
+    BufferViewList(std::string_view str) { _views.push_back(str); }
+
+    BufferViewList(const std::string& str) : BufferViewList(std::string_view(str)) {}
+
+    BufferViewList(const char* str) : BufferViewList(std::string_view(str)) {}
+
+    BufferViewList(const BufferList& buffers);
+
+    void remove_prefix(size_t n);
+
+    size_t size() const;
+
+    std::vector<iovec> as_iovecs() const;
+
+};
+

@@ -41,7 +41,7 @@ std::string BufferList::concatenate() const {
 }  
 
 size_t BufferList::size() const {
-    int ret{0};
+    size_t ret{0};
     for (const auto& buf : _buffers) {
         ret += buf.size();
     }
@@ -61,4 +61,42 @@ void BufferList::remove_prefix(size_t n) {
             _buffers.pop_front();
         }
     }
+}
+
+BufferViewList::BufferViewList(const BufferList& buffers) {
+    for (auto& buf : buffers.buffers()) {
+        _views.push_back(buf);
+    }
+}
+
+void BufferViewList::remove_prefix(size_t n) {
+    while (n > 0) {
+        if (_views.empty()) {
+            throw std::out_of_range("BufferList::remove_prefix");
+        }
+        if (n < _views.front().size()) {
+            _views.front().remove_prefix(n);
+            n = 0;
+        } else {
+            n -= _views.front().size();
+            _views.pop_front();
+        }
+    }
+}
+
+
+size_t BufferViewList::size() const {
+    size_t ret{0};
+    for (const auto& buf : _views) {
+        ret += buf.size();
+    }
+    return ret;
+}
+
+std::vector<iovec> BufferViewList::as_iovecs() const {
+    std::vector<iovec> vec;
+    for (const auto& str : _views) {
+        vec.push_back({const_cast<char*>(str.data()), str.size()});
+    }
+    return vec;
 }
